@@ -1,88 +1,110 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 body {
-    background: #000;
+  background: #000;
 }
 .cont {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 header {
-    width: 100%;
+  width: 100%;
 }
 header .cont {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap
-    ;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 header .cont .logo {
-    flex: 1;
-    padding: 10px;
+  flex: 1;
+  padding: 10px;
 }
 header .cont .logo img {
-    width: 140px;
+  width: 140px;
 }
 header .cont nav {
-    padding: 20px;
+  padding: 20px;
 }
 header .cont nav ul {
-    display:  flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  list-style: none;
 }
 header .cont nav ul li {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 header .cont nav ul li a {
-    font-weight: bold;
+  font-weight: bold;
 }
 header .cont nav ul li .signIn {
-    background: #25ce1d;
-    padding: 5px;
-    border-radius: 5px;
-    color: #000;
+  background: #25ce1d;
+  padding: 5px;
+  border-radius: 5px;
+  color: #000;
 }
 
 .hero {
-    height: 100vh;
+  height: 100vh;
 }
 .hero .cont {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 40px;
 }
 .hero .cont .profileinfo {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
 }
 .hero .cont .profileinfo h2 {
-    font-size: 28px;
-    padding-top: 50px;
+  font-size: 28px;
+  padding-top: 50px;
 }
 .hero .cont .profileinfo h2 span {
-    font-size: 28px;
-     color: #25ce1d;
+  font-size: 28px;
+  color: #25ce1d;
 }
 .hero .cont .profileinfo p {
-    color: #25ce1d;
+  color: #25ce1d;
 }
 .hero .cont .profilepic {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
 }
 .hero .cont .profilepic img {
-    width: 200px;
-    border-radius: 50%;
-    border: 2px solid gray;
+  width: 200px;
+  border-radius: 50%;
+  border: 2px solid gray;
+}
+
+.socials {
+  margin: 10px;
+}
+.socials ul {
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.socials ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.socials ul li a img {
+  width: 30px;
+}
+
+footer {
+    background: #676767;
+    padding: 20px;
+    text-align: center;
 }
