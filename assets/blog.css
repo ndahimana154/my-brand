@@ -1,0 +1,37 @@
+.blog {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.blog-row .blog-box {
+    display: flex;
+    flex-direction: row;
+}
+.blog-row .blog-box .img {
+    flex: 1;
+    padding: 5px;
+    padding-left: 0;
+}
+.blog-row .blog-box .img img {
+    width: 100%;
+    border-radius: 10px;
+}
+.blog-row .blog-box .info {
+    flex: 2;
+    padding: 10px;
+}
+.blog-row .blog-box .info .author {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.blog-row .blog-box .info .author i {
+    color: #25CE1D;
+}
+.blog-row .blog-box .info .author span {
+    color: #25CE1D;
+}
+.blog-row .blog-box .info .time i{
+    color: #A5A5A5;
+}
+.blog-row .blog-box .info .time  span {
+    color: #A5A5A5;
+}
