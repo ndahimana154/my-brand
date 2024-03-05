@@ -6,6 +6,10 @@
   color: #fff;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
 body {
   background: #000;
 }
@@ -41,13 +45,13 @@ header .cont nav ul li {
   margin-left: 10px;
 }
 header .cont nav ul li a {
-  font-weight: bold;
+  font-weight: 600;
 }
 header .cont nav ul li .signIn {
   background: #25ce1d;
   padding: 5px;
   border-radius: 5px;
-  color: #000;
+  color: #fff;
 }
 
 .hero {
@@ -102,6 +106,14 @@ header .cont nav ul li .signIn {
 .socials ul li a img {
   width: 30px;
 }
+
+
+
+
+
+
+
+
 
 footer {
     background: #676767;
