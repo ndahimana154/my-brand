@@ -1,5 +1,6 @@
 .hero {
   height: 100vh;
+  margin-top: 100px;
 }
 .hero .cont {
   display: flex;
@@ -36,4 +37,15 @@
 
 .hero .cont {
   margin-bottom: 200px;
+}
+
+
+@media (max-width: 450px) {
+    /* body {
+        display: none;
+    } */
+    
+    .hero .cont {
+        flex-direction: column;
+    }
 }

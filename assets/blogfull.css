@@ -5,6 +5,8 @@
 .article .article-section .img {
   width: 100%;
   height: 400px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .article .article-section .img img {
   width: 100%;
@@ -17,7 +19,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.article .article-section.author i {
+.article .article-section .author i {
   color: #25ce1d;
 }
 .article .article-section .author span {
@@ -96,12 +98,12 @@
   margin-left: 15px;
 }
 .leave-comment form .sendBtn {
-    text-align: right;
+  text-align: right;
 }
 .leave-comment form .sendBtn button {
-    background: #25ce1d;
-    padding: 5px;
-    border: 0;
-    border-radius: 10px;
-    cursor: pointer;
+  background: #25ce1d;
+  padding: 5px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
 }

@@ -18,7 +18,11 @@ body {
   margin: auto;
 }
 header {
-  width: 100%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background: #000;
+  z-index: 10;
 }
 header .cont {
   display: flex;
@@ -53,6 +57,12 @@ header .cont nav ul li .signIn {
   border-radius: 5px;
   color: #fff;
 }
+header .cont nav #closemobile-menu {
+  display: none;
+}
+header .cont .mobile-menu {
+  display: none;
+}
 
 .socials {
   margin: 10px;
@@ -71,16 +81,66 @@ header .cont nav ul li .signIn {
   width: 30px;
 }
 
-
-
-
-
-
-
-
-
 footer {
-    background: #676767;
-    padding: 20px;
-    text-align: center;
+  background: #676767;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 1020px) {
+  .cont {
+    width: 80%;
+  }
+}
+@media (max-width: 820px) {
+  .cont {
+    width: 95%;
+  }
+}
+
+@media (max-width: 450px) {
+  header nav {
+    display: none;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    position: fixed;
+    background: #000;
+  }
+  header .cont nav ul {
+    flex-direction: column;
+    flex: 1;
+  }
+  header .cont nav ul li {
+    margin-top: 20px;
+  }
+  header nav #closemobile-menu {
+    display: block;
+  }
+  header nav #closemobile-menu button {
+    background: transparent;
+    border: 0;
+  }
+  header nav #closemobile-menu button img {
+    width: 40px;
+  }
+  header .cont .mobile-menu {
+    display: block;
+    padding: 10px;
+    padding-right: 0;
+  }
+  header .cont .mobile-menu button {
+    background: transparent;
+    cursor: pointer;
+    border: 0;
+  }
+  header .cont .mobile-menu button img {
+    width: 40px;
+  }
+
+  footer {
+    margin-top: 200px;
+  }
 }
