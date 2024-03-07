@@ -13,12 +13,17 @@ h2 {
 body {
   background: #000;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 .cont {
   width: 1020px;
   margin: auto;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 header {
   width: 100vw;
@@ -53,6 +58,10 @@ header .cont nav ul li {
 }
 header .cont nav ul li a {
   font-weight: 600;
+  padding: 10px;
+}
+header .cont nav ul li .active {
+  border-bottom: 3px solid #25ce1d ;
 }
 header .cont nav ul li .signIn {
   background: #25ce1d;
@@ -85,10 +94,13 @@ header .cont .mobile-menu {
 }
 
 footer {
-  background: #676767;
+  background: #fff;
   padding: 20px;
   text-align: center;
   width: 100%;
+}
+footer .copy {
+  color: #000;
 }
 
 @media (max-width: 1020px) {
@@ -104,7 +116,7 @@ footer {
 
 @media (max-width: 750px) {
   .cont {
-    width: 80%;
+    width: 90%;
   }
   header nav {
     display: none;
@@ -126,6 +138,7 @@ footer {
   header .cont nav ul li {
     margin-top: 20px;
   }
+ 
   header nav #closemobile-menu {
     display: block;
   }
