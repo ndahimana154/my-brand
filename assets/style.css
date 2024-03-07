@@ -12,6 +12,9 @@ h2 {
 }
 body {
   background: #000;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 .cont {
   width: 1020px;
@@ -95,23 +98,27 @@ footer {
 }
 @media (max-width: 820px) {
   .cont {
-    width: 95%;
+    /* width: 80%; */
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 750px) {
   header nav {
     display: none;
     flex-direction: row;
-    width: 80%;
+    width: 90%;
+    /* padding: 100px; */
     margin: auto;
     height: 100vh;
     position: fixed;
+    top: 0;
+    left: 0;
     background: #000;
   }
   header .cont nav ul {
     flex-direction: column;
-    flex: 1;
+    /* flex: 1; */
+    width: 70%;
   }
   header .cont nav ul li {
     margin-top: 20px;
