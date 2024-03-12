@@ -4,9 +4,11 @@
 }
 .portfolio .portfolio-row {
   width: 100%;
+  margin-top: 50px;
 }
 .portfolio .portfolio-row .portfolio-box {
   width: 100%;
+  margin-top: 30px;
 }
 .portfolio .portfolio-row .portfolio-box .port-title {
   display: flex;

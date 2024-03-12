@@ -2,6 +2,9 @@
     margin-top: 100px;
     margin-bottom: 30px;
 }
+.blog-row {
+    margin-top: 50px;
+}
 .blog-row .blog-box {
     display: flex;
     flex-direction: row;
