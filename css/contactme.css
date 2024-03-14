@@ -6,65 +6,78 @@
 }
 .contactme .contactme-section {
   width: 100%;
-  height: 500px;
+  min-height: 500px;
 }
 
 .contactme .contactme-section p {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.contactme .contactme-section form .form-row {
+.formerrormsg,
+.error {
+  color: red;
+}
+.contactme .contactme-section .form .form-row {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
   width: 100%;
 }
 
-.contactme .contactme-section form .placeholder {
+.contactme .contactme-section .form .placeholder {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
-.contactme .contactme-section form .placeholder label {
+.contactme .contactme-section .form .placeholder label {
   color: #a5a5a5;
 }
-.contactme .contactme-section form .placeholder input,
-.contactme .contactme-section form .placeholder textarea {
+.contactme .contactme-section .form .placeholder input,
+.contactme .contactme-section .form .placeholder textarea {
   background: transparent;
   border: 0;
   border-radius: 5px;
   border: 2px solid #a5a5a5;
   margin-top: 5px;
-  padding: 5px;
+  padding: 10px;
   outline: 0;
 }
-.contactme .contactme-section form .form-row .left,
-.contactme .contactme-section form .form-row .right {
+.contactme .contactme-section .form .form-row .left,
+.contactme .contactme-section .form .form-row .right {
   flex: 1;
 }
-.contactme .contactme-section form .form-row .left input,
-.contactme .contactme-section form .form-row .right textarea {
+.contactme .contactme-section .form .form-row .left input,
+.contactme .contactme-section .form .form-row .right textarea {
   width: 100%;
 }
-.contactme .contactme-section form .form-row .left {
+.contactme .contactme-section .form .form-row .left {
   padding-right: 30px;
 }
-.contactme .contactme-section form .sendBtn {
+.contactme .contactme-section .form .sendBtn {
   text-align: right;
 }
-.contactme .contactme-section form .sendBtn button {
+.contactme .contactme-section .form .sendBtn button {
   background: #25ce1d;
   border: 0;
   padding: 8px;
   cursor: pointer;
   border-radius: 10px;
+  cursor: pointer;
 }
 .contactme .contactme-section .socials {
   margin-top: 30px;
 }
 
 @media (max-width: 820px) {
-  .contactme .contactme-section form .form-row {
+  .contactme .contactme-section .form .form-row {
     flex-direction: column;
+    width: 90%;
   }
+  .contactme .contactme-section .form .form-row .left {
+    padding: 0;
+  }
+.contactme .contactme-section .form .sendBtn {
+  width: 90%;
+  text-align: left;
+}
 }

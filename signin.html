@@ -58,17 +58,18 @@
         <div class="cont">
           <div class="signin-section">
             <h2>Sign into your account.</h2>
-            <form action="">
+            <div class="error" id="formError"></div>
+            <form id="loginForm" action="#">
               <div class="placeholder">
-                <label for=""> Username </label>
-                <input type="text" name="" id="" />
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" />
               </div>
               <div class="placeholder">
-                <label for=""> Password </label>
-                <input type="password" name="" id="" />
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" />
               </div>
               <div class="sendBtn">
-                <button>
+                <button type="submit">
                   <i class="fa fa-paper-plane"></i>
                   Sign in
                 </button>
@@ -82,5 +83,9 @@
       </footer>
     </div>
     <script src="./js/menu-toggler.js"></script>
+    <script src="./js/signin.js"></script>
+
+    <!-- SMTPJS -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
