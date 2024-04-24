@@ -13,12 +13,11 @@ document
     passwordError.textContent = "";
 
     // Validate username
-    if (username.length == "") {
+    if (username == "") {
       usernameError.textContent = "Username can't be empty";
     } else if (username.length < 3) {
       usernameError.textContent = "Username must be at least 3 characters long";
-    }
-    if (!/^[a-zA-Z0-9]+$/.test(username)) {
+    } else if (!/^[a-zA-Z0-9]+$/.test(username)) {
       usernameError.textContent =
         "Username can only contain letters and numbers";
     } else if (/^\d+$/.test(username)) {
@@ -75,6 +74,14 @@ document
         }
       }
 
-      alert("Form submitted successfully!");
+      if (username == "ndahimana154") {
+        if (password == "GitPAUL@123") {
+          alert("You are logged in");
+        } else {
+          alert("Incorrect username or password");
+        }
+      } else {
+        alert("Username doesn't exist.");
+      }
     }
   });

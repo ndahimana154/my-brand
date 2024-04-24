@@ -1,0 +1,113 @@
+h1 {
+  font-size: 25px;
+  color: #25ce1d;
+}
+.admin-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+.admin-header .logo {
+  flex: 1;
+}
+.admin-header .logo img {
+  width: 150px;
+}
+.admin-header .btn button {
+  background: #25ce1d;
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dash-board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.dash-board .left {
+  width: 300px;
+  padding: 10px;
+}
+.dash-board .left ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+.dash-board .left ul li {
+  margin-top: 10px;
+}
+.dash-board .right .boards-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.dash-board .right .boards-row .board {
+  width: 200px;
+  margin: 10px;
+  background: #474747;
+  padding: 10px;
+  border-radius: 10px;
+  user-select: none;
+}
+.dash-board .right .new-form {
+  margin-top: 20px;
+}
+.dash-board .right .new-form p {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.dash-board .right .new-form p label {
+  margin-bottom: 5px;
+}
+.dash-board .right .new-form p input,
+.dash-board .right .new-form p textarea {
+  padding: 10px;
+  width: 400px;
+  outline: 0;
+  background: transparent;
+  border: 2px solid #474747;
+}
+.dash-board .right .new-form p button {
+  width: 80px;
+  background: #25ce1d;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+}
+.lists-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.lists-row .list-box {
+    width: 300px;
+    margin: 10px;
+    margin-left: 0;
+}
+.lists-row .list-box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.lists-row .list-box span {
+    color: #25ce1d;
+}
+.lists-row .list-box span i {
+    color: #25ce1d;
+}
+.lists-row .list-box button {
+    background: #474747;
+    border: 0;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.lists-row .list-box .delete {
+    background: #d10d0d;
+}

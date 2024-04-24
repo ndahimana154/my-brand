@@ -16,6 +16,9 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+button {
+  cursor: pointer;
+}
 .cont {
   width: 1020px;
   margin: auto;

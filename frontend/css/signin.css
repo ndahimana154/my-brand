@@ -11,6 +11,7 @@
 }
 .signin .signin-section form {
   margin-top: 20px;
+  width: 400px;
 }
 .signin .signin-section form .placeholder {
   margin-bottom: 10px;
