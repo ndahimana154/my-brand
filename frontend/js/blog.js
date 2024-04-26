@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', async () => {
     try {
-      const response = await fetch('http://localhost:3300/api/blog/');
+      const response = await fetch('http://localhost:3301/api/blog/');
       const data = await response.json();
       const blogRow = document.getElementById('blogRow');
 

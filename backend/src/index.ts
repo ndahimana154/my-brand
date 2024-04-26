@@ -7,7 +7,7 @@ import path from "path";
 import "./database/config/database";
 
 const app: Express = express();
-const port: number = 3300;
+const port: number = 3301;
 
 app.use(cors()); // Apply CORS middleware first
 

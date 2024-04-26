@@ -1,6 +1,6 @@
 document
   .getElementById("loginForm")
-  .addEventListener("submit", function (event) {
+  .addEventListener("submit", async function (event) {
     event.preventDefault();
 
     var username = document.getElementById("username").value.trim();
@@ -12,76 +12,44 @@ document
     usernameError.textContent = "";
     passwordError.textContent = "";
 
-    // Validate username
-    if (username == "") {
+    // Validate username (improvements based on suggestions)
+    if (username === "") {
       usernameError.textContent = "Username can't be empty";
-    } else if (username.length < 3) {
-      usernameError.textContent = "Username must be at least 3 characters long";
-    } else if (!/^[a-zA-Z0-9]+$/.test(username)) {
-      usernameError.textContent =
-        "Username can only contain letters and numbers";
-    } else if (/^\d+$/.test(username)) {
-      usernameError.textContent = "Username cannot contain numbers only";
     }
 
-    // Validate password
-    if (password.length == "") {
+    // Validate password (consider complexity requirements)
+    if (password === "") {
       passwordError.textContent = "Password can't be empty";
-    } else if (password.length < 8) {
-      passwordError.textContent = "Password must be at least 8 characters long";
-    } else if (
-      !/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}/.test(
-        password
-      )
-    ) {
-      passwordError.textContent =
-        "Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character";
     }
 
-    // If there are no errors, submit the form
+    // If no validation errors, proceed with login
     if (!usernameError.textContent && !passwordError.textContent) {
-      // Form is valid, proceed with login or other actions
-      if (!usernameError.textContent && !passwordError.textContent) {
-        usernameError.textContent = "";
-        passwordError.textContent = "";
+      try {
+        const response = await fetch("http://localhost:3301/api/user/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        });
 
-        // Create object to store form values
-        var LogggedUser = {
-          username: username,
-          password: password,
-        };
-
-        // Convert them into JSON string
-        var LogggedUserJSON = JSON.stringify(LogggedUser);
-
-        // Store in local Storage
-        localStorage.setItem("LogginFormData", LogggedUserJSON);
-
-        // Retrieve data
-        var StoredLoggedData = localStorage.getItem("LogginFormData");
-
-        if (StoredLoggedData) {
-          var formData = JSON.parse(StoredLoggedData);
-
-          // Accessing
-          var storedUsername = formData.username;
-          var storedPassword = formData.password;
-
-          console.log("Username: ", storedUsername);
-          console.log("Password: ", storedPassword);
-        } else {
-          console.log("No data stored on Local Storage");
+        if (!response.ok) {
+          throw new Error(response.statusText);
         }
-      }
 
-      if (username == "ndahimana154") {
-        if (password == "GitPAUL@123") {
-          alert("You are logged in");
-        } else {
-          alert("Incorrect username or password");
-        }
-      } else {
-        alert("Username doesn't exist.");
+        const data = await response.json(); // Assuming the response contains a token and username
+
+        // Store token and username securely in session storage (not local storage)
+        sessionStorage.setItem("accessToken", data.token);
+        sessionStorage.setItem("username", data.username);
+
+        alert("Login successful!");
+
+        // Optionally redirect to a logged-in user page
+        window.location.href = "./admin-home.html"; // Replace with your desired redirect URL
+      } catch (error) {
+        console.error("Error logging in:", error);
+        alert("Login failed: " + error.message);
       }
     }
   });

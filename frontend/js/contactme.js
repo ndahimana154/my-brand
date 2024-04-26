@@ -74,7 +74,7 @@ function validateContactForm(event) {
       message: message,
     };
 
-    fetch("http://localhost:3300/api/message", {
+    fetch("http://localhost:3301/api/message", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
