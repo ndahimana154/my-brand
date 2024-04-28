@@ -16,15 +16,13 @@ window.addEventListener("DOMContentLoaded", function () {
         );
         const data = await response.json();
 
-
         // Update the elements with the retrieved blog content
         document.querySelector(".article-section h2").textContent =
           data.data.title;
         document.querySelector(
           ".article-section .img img"
-        ).src = `./images/${data.data.cover}`;
-        document.querySelector(".article-section .author span").textContent =
-          data.data.author;
+        ).src = `${data.data.cover}`;
+        document.querySelector(".article-section .author span").textContent ="Ndahimana Bonheur"
         document.querySelector(".article-section .time span").textContent =
           data.data.postedAt;
         document.querySelector(".article-section .overview").textContent =
@@ -39,6 +37,52 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   };
   getBlogFull();
+
+  const getBlogComments = async (blogId) => {
+    try {
+      const response = await fetch(
+        `http://localhost:3301/api/comment/${blogId}`
+      );
+      const data = await response.json();
+
+      const commentsRow = document.querySelector(".comments-row");
+
+      // Clear existing HTML content
+      commentsRow.innerHTML = "";
+      if (data.blogComments.length < 1) {
+        commentsRow.innerHTML = "No comments found!";
+      }
+      // Loop through the fetched comments data and create HTML elements
+      data.blogComments.forEach((comment) => {
+        const commentBox = document.createElement("div");
+        commentBox.classList.add("comment-box");
+
+        const names = document.createElement("div");
+        names.classList.add("names");
+        names.textContent = comment.name;
+
+        const email = document.createElement("div");
+        email.classList.add("email");
+        email.textContent = comment.email;
+
+        const commentText = document.createElement("div");
+        commentText.classList.add("comment");
+        commentText.textContent = comment.comment;
+
+        commentBox.appendChild(names);
+        commentBox.appendChild(email);
+        commentBox.appendChild(commentText);
+
+        commentsRow.appendChild(commentBox);
+      });
+      // getBlogFull();
+    } catch (error) {
+      console.error("Error fetching blog comments:", error.message);
+    }
+  };
+
+  // Call the function with the appropriate blog ID
+  getBlogComments(blogId);
 
   // Get form elements
   const firstname = document.getElementById("firstname");
@@ -71,6 +115,10 @@ window.addEventListener("DOMContentLoaded", function () {
     if (!json.success) {
       alert(json.message);
     } else {
+      firstname: firstname.value = "";
+      lastname: lastname.value = "";
+      email: email.value = "";
+      comment: comment.value = "";
       alert("Sending comment succed.");
     }
   });

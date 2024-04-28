@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       const response = await fetch('https://my-brand-backend-5cne.onrender.com/api/blog');
       const data = await response.json();
       const blogRow = document.getElementById('blogRow');
-
+console.log(data)
       if (data.success && data.data) {
         data.data.forEach(blog => {
           const blogBox = document.createElement('a');

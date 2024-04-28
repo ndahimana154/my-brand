@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", async () => {
           const imgDiv = document.createElement("div");
           imgDiv.classList.add("img");
           const img = document.createElement("img");
-        //   img.src = project.imageUrl; // Use the image URL from your backend
+          img.src = project.image; // Use the image URL from your backend
           img.alt = project.image; // Set alt text for accessibility
           imgDiv.appendChild(img);
           portRow.appendChild(imgDiv);
