@@ -1,8 +1,9 @@
 window.addEventListener("DOMContentLoaded", async () => {
   const getProjects = async () => {
     try {
-      const response = await fetch("https://my-brand-backend-5cne.onrender.com/api/project/");
+      const response = await fetch("https://my-brand-backend-server.onrender.com/api/project/");
       const data = await response.json();
+      console.log(data)
       const portfolioRow = document.getElementById("portfolioRow");
       portfolioRow.innerHTML = "";
       if (data.success && data.data) {
@@ -10,7 +11,6 @@ window.addEventListener("DOMContentLoaded", async () => {
         data.data.forEach((project) => {
           const projectBox = document.createElement("div");
           projectBox.classList.add("portfolio-box");
-
           // Project Title
           const portTitle = document.createElement("div");
           portTitle.classList.add("port-title");

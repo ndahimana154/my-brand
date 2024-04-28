@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", function () {
       if (blogId) {
         // Fetch the specific blog content using the ID
         const response = await fetch(
-          `https://my-brand-backend-5cne.onrender.com/api/blog/${blogId}`
+          `https://my-brand-backend-server.onrender.com/api/blog/${blogId}`
         );
         const data = await response.json();
 
@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const getBlogComments = async (blogId) => {
     try {
       const response = await fetch(
-        `https://my-brand-backend-5cne.onrender.com/api/comment/${blogId}`
+        `https://my-brand-backend-server.onrender.com/api/comment/${blogId}`
       );
       const data = await response.json();
 
@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         const email = document.createElement("div");
         email.classList.add("email");
-        email.textContent = comment.email;
+        email.textContent = `${comment.firstname} ${comment.lastname}`;
 
         const commentText = document.createElement("div");
         commentText.classList.add("comment");
@@ -101,7 +101,7 @@ window.addEventListener("DOMContentLoaded", function () {
       comment: comment.value.trim(),
     };
     const response = await fetch(
-      `https://my-brand-backend-5cne.onrender.com/api/comment/${blogId}`,
+      `https://my-brand-backend-server.onrender.com/api/comment/${blogId}`,
       {
         method: "POST",
         headers: {
