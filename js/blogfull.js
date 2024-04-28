@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const getBlogComments = async (blogId) => {
     try {
       const response = await fetch(
-        `http://localhost:3301/api/comment/${blogId}`
+        `https://my-brand-backend-5cne.onrender.com/api/comment/${blogId}`
       );
       const data = await response.json();
 
@@ -101,7 +101,7 @@ window.addEventListener("DOMContentLoaded", function () {
       comment: comment.value.trim(),
     };
     const response = await fetch(
-      `http://localhost:3301/api/comment/${blogId}`,
+      `https://my-brand-backend-5cne.onrender.com/api/comment/${blogId}`,
       {
         method: "POST",
         headers: {

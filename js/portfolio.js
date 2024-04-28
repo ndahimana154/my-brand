@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", async () => {
   const getProjects = async () => {
     try {
-      const response = await fetch("http://localhost:3301/api/project/");
+      const response = await fetch("https://my-brand-backend-5cne.onrender.com/api/project/");
       const data = await response.json();
       const portfolioRow = document.getElementById("portfolioRow");
       portfolioRow.innerHTML = "";
