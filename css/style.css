@@ -10,6 +10,10 @@ h2 {
   font-size: 22px;
   font-weight: 600;
 }
+h5 {
+  color: #25ce1d;
+  font-size: 27px;
+}
 body {
   background: #000;
   width: 100%;

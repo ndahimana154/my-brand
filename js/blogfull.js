@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", function () {
         const data = await response.json();
 
         // Update the elements with the retrieved blog content
-        document.querySelector(".article-section h2").textContent =
+        document.querySelector(".article-section h5").textContent =
           data.data.title;
         document.querySelector(
           ".article-section .img img"

@@ -4,8 +4,9 @@ window.addEventListener("DOMContentLoaded", async () => {
       "https://my-brand-backend-server.onrender.com/api/blog"
     );
     const data = await response.json();
+    console.log(data); // Log the data received from the server
     const blogRow = document.getElementById("blogRow");
-    console.log(data);
+
     if (data.success && data.data) {
       data.data.forEach((blog) => {
         const blogBox = document.createElement("a");
