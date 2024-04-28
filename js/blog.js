@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         authorIcon.classList.add("fa", "fa-user-circle");
 
         const authorSpan = document.createElement("span");
-        authorSpan.textContent = blog.author; // Assuming 'author' is the field containing the author name
+        authorSpan.textContent = "Ndahimana Bonheur"; // Assuming 'author' is the field containing the author name
 
         authorDiv.appendChild(authorIcon);
         authorDiv.appendChild(authorSpan);
