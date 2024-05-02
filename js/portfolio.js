@@ -1,4 +1,8 @@
 window.addEventListener("DOMContentLoaded", async () => {
+  // Show loading rings while waiting for the response
+  const loadingDiv = document.querySelector(".center");
+  loadingDiv.style.display = "flex";
+
   const getProjects = async () => {
     try {
       const response = await fetch("https://my-brand-backend-server.onrender.com/api/project/");
@@ -69,6 +73,8 @@ window.addEventListener("DOMContentLoaded", async () => {
           // Append the project box to the portfolio row
           portfolioRow.appendChild(projectBox);
         });
+        // Hide loading rings after data is fetched and displayed
+        loadingDiv.style.display = "none";
       } else {
         console.error("Failed to fetch projects:", data.message);
       }

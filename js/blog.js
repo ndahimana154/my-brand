@@ -1,4 +1,7 @@
 window.addEventListener("DOMContentLoaded", async () => {
+  const loadingDiv = document.querySelector(".center");
+  loadingDiv.style.display = "flex"; // Show loading rings initially
+
   try {
     const response = await fetch(
       "https://my-brand-backend-server.onrender.com/api/blog"
@@ -55,6 +58,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         blogRow.appendChild(blogBox);
       });
+      loadingDiv.style.display = "none"; // Hide loading rings after data is fetched and displayed
     } else {
       console.error("Failed to fetch blogs:", data.message);
     }

@@ -1,4 +1,7 @@
 window.addEventListener("DOMContentLoaded", function () {
+  const loadingDiv = document.querySelector(".center");
+  loadingDiv.style.display = "flex"; // Show loading rings initially
+
   // Extract the blog ID from the URL
   const urlParams = new URLSearchParams(window.location.search);
   const blogId = urlParams.get("id");
@@ -6,6 +9,7 @@ window.addEventListener("DOMContentLoaded", function () {
     alert("No blog sent to server");
     window.location.href = "./blog.html";
   }
+
   const getBlogFull = async () => {
     try {
       // If the blog ID is present in the URL
@@ -22,7 +26,8 @@ window.addEventListener("DOMContentLoaded", function () {
         document.querySelector(
           ".article-section .img img"
         ).src = `${data.data.cover}`;
-        document.querySelector(".article-section .author span").textContent ="Ndahimana Bonheur"
+        document.querySelector(".article-section .author span").textContent =
+          "Ndahimana Bonheur";
         document.querySelector(".article-section .time span").textContent =
           data.data.postedAt;
         document.querySelector(".article-section .overview").textContent =
@@ -34,6 +39,8 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     } catch (error) {
       console.error("Error fetching blog content:", error.message);
+    } finally {
+      loadingDiv.style.display = "none"; // Hide loading rings after data is fetched
     }
   };
   getBlogFull();
@@ -75,9 +82,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
         commentsRow.appendChild(commentBox);
       });
-      // getBlogFull();
     } catch (error) {
       console.error("Error fetching blog comments:", error.message);
+    } finally {
+      loadingDiv.style.display = "none"; // Hide loading rings after data is fetched
     }
   };
 
@@ -100,26 +108,34 @@ window.addEventListener("DOMContentLoaded", function () {
       email: email.value.trim(),
       comment: comment.value.trim(),
     };
-    const response = await fetch(
-      `https://my-brand-backend-server.onrender.com/api/comment/${blogId}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }
-    );
-    const json = await response.json();
+    try {
+      // Show loading rings while sending comment
+      loadingDiv.style.display = "flex";
+      const response = await fetch(
+        `https://my-brand-backend-server.onrender.com/api/comment/${blogId}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+      const json = await response.json();
 
-    if (!json.success) {
-      alert(json.message);
-    } else {
-      firstname: firstname.value = "";
-      lastname: lastname.value = "";
-      email: email.value = "";
-      comment: comment.value = "";
-      alert("Sending comment succed.");
+      if (!json.success) {
+        alert(json.message);
+      } else {
+        firstname.value = "";
+        lastname.value = "";
+        email.value = "";
+        comment.value = "";
+        alert("Sending comment succeeded.");
+      }
+    } catch (error) {
+      console.error("Error sending comment:", error.message);
+    } finally {
+      loadingDiv.style.display = "none"; // Hide loading rings after comment is sent
     }
   });
 });
