@@ -67,7 +67,7 @@ window.addEventListener("DOMContentLoaded", async () => {
           const externalLink = document.createElement("a");
           externalLink.href = project.externalLink;
           externalLink.target = "_blank";
-          externalLink.innerHTML = `<i class="fa fa-link"></i> External link`;
+          externalLink.innerHTML = `<i class="fa fa-external-link-square"></i> Link`;
           infoDiv.appendChild(externalLink);
 
           // Append the project box to the portfolio row
