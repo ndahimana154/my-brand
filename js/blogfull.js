@@ -48,7 +48,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const getBlogComments = async (blogId) => {
     try {
       const response = await fetch(
-        `https://my-brand-backend-server.onrender.com/api/comment/${blogId}`
+        `https://my-brand-backend-server.onrender.com/api/comment/reviewed/${blogId}`
       );
       const data = await response.json();
 
@@ -56,6 +56,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
       // Clear existing HTML content
       commentsRow.innerHTML = "";
+      // console.log(data.blogComments);
       if (data.blogComments.length < 1) {
         commentsRow.innerHTML = "No comments found!";
       }
