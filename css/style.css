@@ -6,6 +6,11 @@
   color: #fff;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+.animate {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
 h2 {
   font-size: 22px;
   font-weight: 600;
