@@ -101,6 +101,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Post comment from the client
   const commentForm = document.getElementById("comment-form");
+  // const loadingDiv = document.querySelector(".center");
+
   commentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const formData = {
