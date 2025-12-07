@@ -40,19 +40,9 @@ const Projects = ({ darkMode }) => {
       tags: ['Next.js', 'Python', 'PostgreSQL', 'AWS'],
       category: 'fullstack',
       github: '#',
-      live: '#',
+      live: 'https://simbasupermarket.netlify.app/',
       color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      id: 4,
-      title: 'Rwandan Tourism App',
-      description:
-        'Mobile-first application showcasing tourism destinations in Rwanda with booking system.',
-      tags: ['React Native', 'Express.js', 'MongoDB', 'Mapbox'],
-      category: 'mobile',
-      github: '#',
-      live: '#',
-      color: 'from-yellow-500 to-orange-500',
+      image: '/simba.webp',
     },
   ];
 
