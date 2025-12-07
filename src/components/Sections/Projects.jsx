@@ -8,7 +8,7 @@ const Projects = ({ darkMode }) => {
 
   const projects = [
     {
-      id: 2,
+      id: 1,
       title: 'Kickside News',
       description:
         'The news website, i have implemented the articles management allowing the journalists to post news and editors to track the progresses and reject or accept some.',
@@ -20,7 +20,7 @@ const Projects = ({ darkMode }) => {
       image: '/kickside-news.webp',
     },
     {
-      id: 1,
+      id: 2,
       title: 'Kickside Store',
       description:
         'Full-featured online marketplace with real-time inventory, payment processing, and admin dashboard.',
@@ -32,7 +32,6 @@ const Projects = ({ darkMode }) => {
       color: 'from-purple-500 to-pink-500',
       image: '/kickside-store.webp',
     },
-
     {
       id: 3,
       title: 'ES Gishoma Website',
@@ -46,6 +45,17 @@ const Projects = ({ darkMode }) => {
     },
     {
       id: 4,
+      title: 'Fixo RW',
+      description: 'A remote helper for making the technical support easier.',
+      tags: ['React.js', 'Nodejs', 'PostgreSQL', 'Digital Ocean'],
+      category: 'fullstack',
+      github: '#',
+      live: 'https://fxo.netlify.app/',
+      color: 'from-blue-500 to-cyan-500',
+      image: '/gishoma.webp',
+    },
+    {
+      id: 5,
       title: 'Simba Supermarket mmock design',
       description: 'I redesigned the website for Simba super market.',
       tags: ['React.js', 'PostgreSQL', 'AWS'],
