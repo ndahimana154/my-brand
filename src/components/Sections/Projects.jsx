@@ -32,12 +32,23 @@ const Projects = ({ darkMode }) => {
       color: 'from-purple-500 to-pink-500',
       image: '/kickside-store.webp',
     },
+
     {
       id: 3,
-      title: 'Real Estate Platform',
-      description:
-        'Property listing platform with virtual tours, mortgage calculator, and agent management.',
-      tags: ['Next.js', 'Python', 'PostgreSQL', 'AWS'],
+      title: 'ES Gishoma Website',
+      description: 'Website designed for Ecole Secondaire Gishoma.',
+      tags: ['React.js', 'Nodejs', 'PostgreSQL', 'Digital Ocean'],
+      category: 'fullstack',
+      github: '#',
+      live: 'https://esgishoma.rw/',
+      color: 'from-blue-500 to-cyan-500',
+      image: '/gishoma.webp',
+    },
+    {
+      id: 4,
+      title: 'Simba Supermarket mmock design',
+      description: 'I redesigned the website for Simba super market.',
+      tags: ['React.js', 'PostgreSQL', 'AWS'],
       category: 'fullstack',
       github: '#',
       live: 'https://simbasupermarket.netlify.app/',
@@ -50,7 +61,6 @@ const Projects = ({ darkMode }) => {
     { id: 'all', label: 'All Projects' },
     { id: 'fullstack', label: 'Full Stack' },
     { id: 'frontend', label: 'Frontend' },
-    { id: 'mobile', label: 'Mobile' },
   ];
 
   const filteredProjects =
