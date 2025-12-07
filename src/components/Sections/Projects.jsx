@@ -52,7 +52,7 @@ const Projects = ({ darkMode }) => {
       github: '#',
       live: 'https://fxo.netlify.app/',
       color: 'from-blue-500 to-cyan-500',
-      image: '/gishoma.webp',
+      image: '/fixo.webp',
     },
     {
       id: 5,
