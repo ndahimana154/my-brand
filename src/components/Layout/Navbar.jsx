@@ -41,7 +41,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </div>
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
@@ -55,7 +54,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               </a>
             ))}
 
-            {/* Theme Toggle */}
             <button
               onClick={toggleDarkMode}
               className={`p-2 rounded-full transition-all ${
@@ -68,7 +66,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="flex items-center space-x-4 md:hidden">
             <button
               onClick={toggleDarkMode}
@@ -87,7 +84,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div
             className={`md:hidden mt-4 pb-4 ${
