@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Layout/Navbar';
 import Hero from './components/Sections/Hero';
+import About from './components/Sections/About';
+import Skills from './components/Sections/Skills';
 import Projects from './components/Sections/Projects';
 import Contact from './components/Sections/Contact';
 
@@ -38,12 +40,12 @@ function App() {
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main>
         <Hero darkMode={darkMode} />
+        <About darkMode={darkMode} />
+        <Skills darkMode={darkMode} />
         <Projects darkMode={darkMode} />
         <Contact darkMode={darkMode} />
-        {/* You'll add About, Skills sections here */}
       </main>
 
-      {/* Footer */}
       <footer
         className={`py-8 mt-20 ${
           darkMode
