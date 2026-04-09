@@ -3,6 +3,7 @@ import Navbar from './components/Layout/Navbar';
 import Hero from './components/Sections/Hero';
 import About from './components/Sections/About';
 import Skills from './components/Sections/Skills';
+import WorkHistory from './components/Sections/WorkHistory';
 import Projects from './components/Sections/Projects';
 import Contact from './components/Sections/Contact';
 
@@ -42,6 +43,7 @@ function App() {
         <Hero darkMode={darkMode} />
         <About darkMode={darkMode} />
         <Skills darkMode={darkMode} />
+        <WorkHistory darkMode={darkMode} />
         <Projects darkMode={darkMode} />
         <Contact darkMode={darkMode} />
       </main>
